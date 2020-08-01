@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		79618B2124D53043001B5731 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79618B2024D53043001B5731 /* AppDelegate.swift */; };
 		79618B2324D53043001B5731 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79618B2224D53043001B5731 /* SceneDelegate.swift */; };
-		79618B2524D53043001B5731 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79618B2424D53043001B5731 /* ViewController.swift */; };
 		79618B2824D53043001B5731 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79618B2624D53043001B5731 /* Main.storyboard */; };
 		79618B2A24D53044001B5731 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79618B2924D53044001B5731 /* Assets.xcassets */; };
 		79618B2D24D53044001B5731 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79618B2B24D53044001B5731 /* LaunchScreen.storyboard */; };
+		79618B3624D530D6001B5731 /* Senator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79618B3524D530D6001B5731 /* Senator.swift */; };
+		79618B3824D530E8001B5731 /* Representative.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79618B3724D530E8001B5731 /* Representative.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		79618B1D24D53043001B5731 /* Reppy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reppy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79618B2024D53043001B5731 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		79618B2224D53043001B5731 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		79618B2424D53043001B5731 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		79618B2724D53043001B5731 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		79618B2924D53044001B5731 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		79618B2C24D53044001B5731 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		79618B2E24D53044001B5731 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		79618B3524D530D6001B5731 /* Senator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Senator.swift; sourceTree = "<group>"; };
+		79618B3724D530E8001B5731 /* Representative.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Representative.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,24 @@
 		79618B1F24D53043001B5731 /* Reppy */ = {
 			isa = PBXGroup;
 			children = (
+				79618B3424D530BE001B5731 /* Models */,
 				79618B2024D53043001B5731 /* AppDelegate.swift */,
 				79618B2224D53043001B5731 /* SceneDelegate.swift */,
-				79618B2424D53043001B5731 /* ViewController.swift */,
 				79618B2624D53043001B5731 /* Main.storyboard */,
 				79618B2924D53044001B5731 /* Assets.xcassets */,
 				79618B2B24D53044001B5731 /* LaunchScreen.storyboard */,
 				79618B2E24D53044001B5731 /* Info.plist */,
 			);
 			path = Reppy;
+			sourceTree = "<group>";
+		};
+		79618B3424D530BE001B5731 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				79618B3524D530D6001B5731 /* Senator.swift */,
+				79618B3724D530E8001B5731 /* Representative.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +149,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				79618B2524D53043001B5731 /* ViewController.swift in Sources */,
+				79618B3824D530E8001B5731 /* Representative.swift in Sources */,
+				79618B3624D530D6001B5731 /* Senator.swift in Sources */,
 				79618B2124D53043001B5731 /* AppDelegate.swift in Sources */,
 				79618B2324D53043001B5731 /* SceneDelegate.swift in Sources */,
 			);
