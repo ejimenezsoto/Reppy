@@ -16,7 +16,7 @@
 		79618B3624D530D6001B5731 /* Senator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79618B3524D530D6001B5731 /* Senator.swift */; };
 		79618B3824D530E8001B5731 /* Representative.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79618B3724D530E8001B5731 /* Representative.swift */; };
 		79618B3E24D54122001B5731 /* NetworkEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79618B3D24D54122001B5731 /* NetworkEnums.swift */; };
-		79618B4124D5434A001B5731 /* SenatorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79618B4024D5434A001B5731 /* SenatorsViewController.swift */; };
+		79ADC28725475B7D0031E55F /* SenatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ADC28625475B7D0031E55F /* SenatorViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,7 +31,7 @@
 		79618B3524D530D6001B5731 /* Senator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Senator.swift; sourceTree = "<group>"; };
 		79618B3724D530E8001B5731 /* Representative.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Representative.swift; sourceTree = "<group>"; };
 		79618B3D24D54122001B5731 /* NetworkEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkEnums.swift; sourceTree = "<group>"; };
-		79618B4024D5434A001B5731 /* SenatorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SenatorsViewController.swift; sourceTree = "<group>"; };
+		79ADC28625475B7D0031E55F /* SenatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SenatorViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,7 +106,7 @@
 		79618B3F24D5432F001B5731 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				79618B4024D5434A001B5731 /* SenatorsViewController.swift */,
+				79ADC28625475B7D0031E55F /* SenatorViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -182,10 +182,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79ADC28725475B7D0031E55F /* SenatorViewController.swift in Sources */,
 				79618B3824D530E8001B5731 /* Representative.swift in Sources */,
 				79618B3624D530D6001B5731 /* Senator.swift in Sources */,
 				79618B2124D53043001B5731 /* AppDelegate.swift in Sources */,
-				79618B4124D5434A001B5731 /* SenatorsViewController.swift in Sources */,
 				793E6C6A254223F100BE952E /* SenatorController.swift in Sources */,
 				79618B2324D53043001B5731 /* SceneDelegate.swift in Sources */,
 				79618B3E24D54122001B5731 /* NetworkEnums.swift in Sources */,

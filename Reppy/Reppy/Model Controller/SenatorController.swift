@@ -10,39 +10,68 @@ import Foundation
 
 class SenatorController {
     
+    var senators: [Senator] = []
+    
+    private     // let urlString = "https://api.propublica.org/congress/v1/{congress}/{chamber}/members.json"
+    let baseURL = URL(string: "https://api.propublica.org/congress/v1/116/senate/members.json")!
+    
     
     func fetchSenators(completion: @escaping (Result<[SenatorFetch], NetworkError>) -> Void) {
     
-    // let urlString = "https://api.propublica.org/congress/v1/{congress}/{chamber}/members.json"
-    let baseURL = URL(string: "https://api.propublica.org/congress/v1/116/senate/members.json")!
     var request = URLRequest(url: baseURL)
            request.httpMethod = HTTPMethod.get.rawValue
            request.setValue("RHGj6XMZpxd2MYs0n343f5FRBNoZ8q5qE8rZ6kYa", forHTTPHeaderField: "X-API-Key")
            
 
-    URLSession.shared.dataTask(with: request, completionHandler: { (data, _, error) in
-        self.parse(json: data!)
+    URLSession.shared.dataTask(with: request) { (data, response, error) in
+       
+        if let response = response {
+            print(response)
+        }
         
-    }) .resume()
+        if let error = error {
+            print("Error decoding senators: \(error)")
+            return
+        }
         
-    }
+        guard let data = data else {
+            completion(.failure(.noData))
+            return
+        }
         
-        func parse(json: Data) {
-            
-            let decoder = JSONDecoder()
+       
             do {
                 
-             let jsonSenators = try decoder.decode(SenatorFetch.self, from: json)
-               
+                let jsonSenators = try self.jsonDecoder.decode(SenatorFetch.self, from: data)
+                let allSenators = jsonSenators.results.first?.members
                 
-                print(jsonSenators)
+                let californiaSenators = allSenators?.filter {$0.state == "CA"}
+                
+                
+               
+//                print(allSenators as Any)
+//                print(californiaSenators as Any)
+                self.senators.append(contentsOf: allSenators!)
                 
             } catch {
-                print(error)
+                print("Error decoding Senators: \(error)")
+                      completion(.failure(.badDecode))
             }
-        }
+        
+    }.resume()
+        
+    }
     
-
+    private lazy var jsonDecoder: JSONDecoder = {
+        let decoder = JSONDecoder()
+        decoder.dateDecodingStrategy = .formatted(SenatorController.dateFormatter)
+        return decoder
+    }()
+    static var dateFormatter: DateFormatter {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
+        return dateFormatter
+    }
         
 }
     
